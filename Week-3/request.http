@@ -1,0 +1,72 @@
+### Read all the users (request to protected route)
+GET http://localhost:4000/user-api/users
+### Read a user by id
+GET http://localhost:4000/user-api/user
+
+###create new user 
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username" : "Nikhil",
+    "password" : "351759",
+    "email" : "nik@gmail.com",
+    "age" : 40
+}
+
+###update a user
+PUT http://localhost:4000/user-api/users/69b2444b1ea7e9a5e2849e59
+Content-Type: application/json
+
+{
+    "username" : "Kapish",
+    "password" : "kapish",
+    "email" : "kaps@gmail.com",
+    "age" : 20
+}
+
+###User Login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email" : "nik@gmail.com",
+    "password" : "351759"
+}
+
+###Delete a user 
+DELETE http://localhost:4000/user-api/users/69aa63aa894670dada971826
+
+### Add product to user cart 
+PUT http://localhost:4000/user-api/cart/product-id/69b24b619a8bbe5635a69322
+
+### Product APIs
+GET http://localhost:4000/product-api/products
+
+###products by id
+ GET http://localhost:4000/product-api/products/69aae6ded6d1451acd8e8a0c
+
+###products creation
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productId" : "102",
+    "productName" : "Bat",
+    "price" : 15000,
+    "brand" : "sg"
+}
+
+###update the products
+PUT http://localhost:4000/product-api/products/69aae6ded6d1451acd8e8a0c
+Content-Type: application/json
+
+{
+    "productId" : "101",
+    "productName" : "Shoes",
+    "price" : 12084,
+    "brand" : "adidas"
+}
+
+###Delete the product by id
+DELETE http://localhost:4000/product-api/products/69aae6ded6d1451acd8e8a0c
