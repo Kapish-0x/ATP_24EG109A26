@@ -1,0 +1,21 @@
+body {
+    background-color: pink; 
+    align-items: center;
+}
+img {
+    display: block;
+    margin: auto;
+}
+h3{
+    text-align: center;
+    border: 5px dotted red;
+}
+hr {
+    background-color: red;
+    height: 2px;
+}
+div {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+}
