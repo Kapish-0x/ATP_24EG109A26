@@ -1,0 +1,39 @@
+.parent {
+    width: 90%;           
+    max-width: 1000px;    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center; 
+    align-items: center;
+    padding: 50px;
+}
+
+.child {
+    box-shadow: 0px 0px 20px;
+    padding: 50px;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dotted red;
+}
+
+body{
+    background-color: red;
+}
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 90px;
+    padding: 15px;
+    background-color: bisque;
+}

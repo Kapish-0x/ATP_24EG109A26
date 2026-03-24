@@ -1,0 +1,47 @@
+nav {
+    background-color: rgba(98, 86, 86, 0.564);
+    padding: 20px;
+    min-height: 300px;
+    text-align: left;
+}
+
+p, h3 {
+    font-size: 1.2rem; 
+}
+
+.button {
+    background-color: rgb(170, 170, 228);
+    padding: 10px 20px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.child {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: rgb(255, 234, 234);
+}
+
+@media (min-width: 768px) {
+    .parent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .child {
+        margin: 10px;
+        flex: 1;
+    }
+
+    p, h3 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        padding: 50px;
+    }
+}

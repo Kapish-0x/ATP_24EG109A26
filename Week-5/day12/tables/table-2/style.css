@@ -1,0 +1,51 @@
+body {
+  background-color: #8dbfc2;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header {
+  background-color: #408892;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+}
+.sub-header th {
+  background-color: #d8f1f3;
+  color: #408892;
+  padding: 15px;
+  font-weight: normal;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  color: #333;
+}
+
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.comment {
+  text-align: left;
+  font-size: 14px;
+  max-width: 250px;
+}
