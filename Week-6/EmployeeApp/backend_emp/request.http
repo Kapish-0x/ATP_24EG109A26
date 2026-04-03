@@ -1,0 +1,26 @@
+### Create Employee
+POST http://localhost:4000/emp
+Content-Type: application/json
+
+{
+  "name": "Ram",
+  "email": "ram@mail.com",
+  "mobile": 9876543210,
+  "designation": "Software Engineer",
+  "companyName": "TechCorp"
+}
+
+### Read All Employees
+GET http://localhost:4000/emp/read
+
+### Update Employee by email
+PUT http://localhost:4000/emp/ram@mail.com
+Content-Type: application/json
+
+{
+  "designation": "Senior Software Engineer",
+  "companyName": "TechCorp International"
+}
+
+### Delete Employee by Email
+DELETE http://localhost:4000/emp/ram@mail.com

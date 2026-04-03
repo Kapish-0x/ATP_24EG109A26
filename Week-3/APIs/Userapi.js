@@ -18,7 +18,7 @@ userApp.post("/auth",async(req,res)=> {
     if(!user) {
         return res.status(404).json({message: "Invalid Email"})
     }
-    //if fetched compare p  asswords
+    //if fetched compare passwords
     let result = await compare(password,user.password) 
     //if password doesnt match
     if(!result) {
