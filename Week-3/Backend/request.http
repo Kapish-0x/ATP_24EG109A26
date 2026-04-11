@@ -1,0 +1,59 @@
+### Read all the users
+GET http://localhost:4000/user-api/users
+
+### Read a user by id
+GET http://localhost:4000/user-api/users/27
+
+###create new user 
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "id":27,
+    "name":"Kapish",
+    "age": 20
+}
+
+###update a user
+PUT http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "id":26,
+    "name":"Rawat",
+    "age": 25
+}
+
+###Delete a user 
+DELETE http://localhost:4000/user-api/users/26
+
+### Product APIs
+GET http://localhost:4000/product-api/products
+
+###products by brand name
+GET http://localhost:4000/product-api/products/adidas
+
+###products creation
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "name": "Studs",
+    "productId" : 104,
+    "brand": "adidas",
+    "price": 5000
+}
+
+###update the products
+PUT http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "name": "shoes",
+    "productId" : 100,
+    "brand": "adidas",
+    "price": 6000
+}
+
+###Delete the product
+DELETE http://localhost:4000/product-api/products/103
