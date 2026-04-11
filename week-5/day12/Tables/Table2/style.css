@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #ffffff;
+  width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-header {
+  background: #4a9d9c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f2f2f2;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+img {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.odd{
+    background-color:pink;
+}
+.even{
+    background-color:paleturquoise;
+}

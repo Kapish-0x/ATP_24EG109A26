@@ -1,0 +1,36 @@
+nav{
+    background-color: white;
+    text-align: center;
+    height: 90px;
+    padding: 4px;
+}
+.navbar{
+    display: flex;
+    text-align: end;
+    list-style: none;
+    justify-content: space-around;
+}
+
+
+body{
+    background-color: bisque;
+    text-align: center;
+
+}
+img{
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+footer{
+    background-color: white;
+}
+
+.foot{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
