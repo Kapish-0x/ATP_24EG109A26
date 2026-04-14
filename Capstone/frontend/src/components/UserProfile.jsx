@@ -12,7 +12,7 @@ import {
   loadingClass,
   errorClass,
   timestampClass,
-} from "../styles/common.js";
+} from "../Styles/common.js";
 
 function UserProfile() {
   const logout = useAuth((state) => state.logout);

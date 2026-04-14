@@ -13,7 +13,7 @@ import {
   submitBtn,
   errorClass,
   articlePageWrapper,
-} from "../styles/common";
+} from "../Styles/common";
 
 function EditArticle() {
   const location = useLocation();

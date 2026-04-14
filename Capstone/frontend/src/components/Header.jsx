@@ -7,7 +7,7 @@ import {
   navLinksClass,
   navLinkClass,
   navLinkActiveClass,
-} from "../styles/common";
+} from "../Styles/common";
 
 function Header() {
   const isAuthenticated = useAuth((state) => state.isAuthenticated);

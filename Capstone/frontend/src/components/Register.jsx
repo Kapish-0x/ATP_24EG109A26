@@ -9,7 +9,7 @@ import {
   pageBackground,
   submitBtn,
   mutedText,
-} from "../styles/common";
+} from "../Styles/common.js"
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
