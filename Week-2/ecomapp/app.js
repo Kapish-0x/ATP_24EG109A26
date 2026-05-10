@@ -14,45 +14,45 @@ import {
 
 import { processPayment } from './payment.js';
 
-console.log('=== E-Commerce Store ===\n');
+console.log('E-Commerce Store\n');
 
-// 1️⃣ Browse products
+//Browse products
 console.log('All Products:');
 console.log(getAllProducts());
 
-// 2️⃣ Search for products
+//Search for products
 console.log('\nSearching for "phone":');
 console.log(searchProducts('phone'));
 
-// 3️⃣ Filter by category
+//Filter by category
 console.log('\nElectronics Category:');
 console.log(getProductsByCategory('electronics'));
 
-// 4️⃣ Add items to cart
-console.log('\n=== Adding to Cart ===');
+//Add items to cart
+console.log('\nAdding to Cart');
 console.log(addToCart(1, 2));  // 2 Laptops
 console.log(addToCart(3, 3));  // 3 Headphones
 console.log(addToCart(1, 1));  // 1 more Laptop (should update quantity)
 
-// 5️⃣ View cart
-console.log('\n=== Current Cart ===');
+//View cart
+console.log('\nCurrent Cart');
 console.log(getCartItems());
 console.log('Cart Total:', getCartTotal());
 
-// 6️⃣ Update quantity
-console.log('\n=== Updating Quantities ===');
+//Update quantity
+console.log('\nUpdating Quantities');
 console.log(updateQuantity(1, 2));  // Change laptop quantity to 2
 
-// 7️⃣ Remove item
-console.log('\n=== Removing Item ===');
+//Remove item
+console.log('\nRemoving Item');
 console.log(removeFromCart(3));  // Remove headphones
 
-// 8️⃣ View updated cart
-console.log('\n=== Updated Cart ===');
+//View updated cart
+console.log('\nUpdated Cart');
 console.log(getCartItems());
 console.log('Cart Total:', getCartTotal());
 
-// 9️⃣ Checkout with coupon
-console.log('\n=== Checkout ===');
+//Checkout with coupon
+console.log('\nCheckout');
 const order = processPayment('upi', 'WELCOME10');
 console.log(order);

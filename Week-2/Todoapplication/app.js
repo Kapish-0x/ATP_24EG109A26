@@ -1,7 +1,11 @@
-import {addTask,getAllTasks} from './tasks.js'
+import { addTask, getAllTasks } from './tasks.js';
 
-//add a task
-addTask('eating','high','2026-02-25')
-addTask('drinking','low','2026-02-25')
-const tasks = getAllTasks()
-console.log(tasks)
+// Adding tasks with priority and due date
+addTask('eating', 'high', '2026-02-25');
+addTask('drinking', 'low', '2026-02-25');
+
+// Retrieving all tasks
+const tasks = getAllTasks();
+
+// Displaying all tasks
+console.log(tasks);

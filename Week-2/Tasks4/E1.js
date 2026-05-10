@@ -1,4 +1,11 @@
+// Array containing initial fruits
 let fruits = ["apple", "banana"];
-let moreFruits=[...fruits,'orange']
-console.log(fruits)
-console.log(moreFruits)
+
+// Creating a new array using spread operator and adding a new fruit
+let moreFruits = [...fruits, 'orange'];
+
+// Displaying original array
+console.log(fruits);
+
+// Displaying updated array
+console.log(moreFruits);

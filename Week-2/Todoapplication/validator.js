@@ -1,34 +1,55 @@
-// 1. Validate task title (not empty, min 3 chars)
+// Validates task title
+// Title should not be empty and must contain at least 3 characters
 function validateTitle(title) {
-    if(!title) {
-      return 'Title is Empty'
+
+    // Check if title is empty
+    if (!title) {
+        return 'Title is Empty';
     }
-    if(title.length<=3) {
-      return 'Min 3 characters required'
+
+    // Check minimum length of title
+    if (title.length <= 3) {
+        return 'Min 3 characters required';
     }
-    return true
+
+    return true;
 }
-                      
-// 2. Validate priority (must be: low, medium, high)
+
+// Validates task priority
+// Allowed values: low, medium, high
 function validatePriority(priority) {
-  const prio=['LOW','MEDIUM','HIGH']
-  let result = prio.includes(prio)
-  if(result === false) {
-    return 'Invalid priority'
-  }
-  return true
-} 
-                      
-// 3. Validate due date (must be future date)
-function validateDueDate(date) {
-  let dueDate = new Date('2026-02-24')
-  let today = new Date()
-  if(dueDate > today) {
-    return 'Invalid due date'
-  }
-  return true
+
+    // Array containing valid priorities
+    const prio = ['LOW', 'MEDIUM', 'HIGH'];
+
+    // Convert input to uppercase and check if it exists
+    let result = prio.includes(priority.toUpperCase());
+
+    // Return error if priority is invalid
+    if (result === false) {
+        return 'Invalid priority';
+    }
+
+    return true;
 }
 
-export{validateTitle,validatePriority,validateDueDate}
+// Validates due date
+// Due date must be a future date
+function validateDueDate(date) {
 
+    // Convert input date into Date object
+    let dueDate = new Date(date);
 
+    // Get current date
+    let today = new Date();
+
+    // Check if due date is in the past
+    if (dueDate <= today) {
+        return 'Invalid due date';
+    }
+
+    return true;
+}
+
+// Exporting validation functions
+export { validateTitle, validatePriority, validateDueDate };

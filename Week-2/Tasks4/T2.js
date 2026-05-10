@@ -1,10 +1,19 @@
-console.log("OTP Sent Successfully")
+// Displays message when OTP is sent
+console.log("OTP Sent Successfully");
+
+// Initial countdown value
 let seconds = 5;
-let interval = setInterval(()=>{
+
+// Runs every 1 second
+let interval = setInterval(() => {
+    // Decrease countdown value
     seconds--;
-    console.log(`OTP can resend after ${seconds} secs`)
-    if(seconds===0) {
-        console.log("Resend OTP")
-        clearInterval(interval)
+    // Display remaining time for OTP resend
+    console.log(`OTP can resend after ${seconds} secs`);
+    // Stop timer when countdown reaches 0
+    if (seconds === 0) {
+        console.log("Resend OTP");
+        // Clear interval to stop execution
+        clearInterval(interval);
     }
-},1000)
+}, 1000);
