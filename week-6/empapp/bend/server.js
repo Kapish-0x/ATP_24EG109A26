@@ -24,10 +24,7 @@ app.use("/api", empApp);
 //connect to db server
 async function connectDB(){
     try{
-        await connect(process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        })
+        await connect(process.env.MONGODB_URI)
         console.log("db connection successful")
         const port =  process.env.PORT || 4000;
         app.listen(port, ()=>console.log(`server listening to ${port}`))
