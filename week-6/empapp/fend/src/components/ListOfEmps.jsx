@@ -18,7 +18,8 @@ function ListOfEmps() {
   const deleteEmployee = async (id) => {
     try {
       setLoading(true);
-      let res = await fetch(`http://localhost:4000/api/emp/${id}`, {
+      const API = import.meta.env.VITE_API_URL; 
+      let res = await fetch(`${API}/emp/${id}`, {
         method: "DELETE",
       });
       if (res.status === 200) {
@@ -41,7 +42,8 @@ function ListOfEmps() {
   async function getEmps() {
     try {
       setLoading(true);
-      let res = await fetch("http://localhost:4000/api/emp");
+      const API = import.meta.env.VITE_API_URL;
+      let res = await fetch(`${API}/emp`);
       if (res.status === 200) {
         let resObj = await res.json();
         setEmps(resObj.payload);
