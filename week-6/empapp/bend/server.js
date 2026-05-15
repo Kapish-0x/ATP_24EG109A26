@@ -13,12 +13,11 @@ app.use(
       "http://localhost:5173",
       "https://atp-24-eg-109-a26-3wku.vercel.app"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // 👈 OPTIONS bhi add kar
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
     credentials: true
   })
 );
 
-// 👇 ye line zaroori hai taaki preflight OPTIONS requests handle ho
 app.options("*", cors());
 
 // add body parser
