@@ -68,7 +68,8 @@ export const useAuth = create((set) => ({
   checkAuth: async () => {
     try {
       set({ loading: true });
-      const res = await axios.get("http://localhost:4000/auth/check-auth", {
+      const API = import.meta.env.VITE_API_URL;
+      const res = await axios.get(`${API}/auth/check-auth`, {
         withCredentials: true,
       });
 
