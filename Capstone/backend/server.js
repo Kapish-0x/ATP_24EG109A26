@@ -13,7 +13,7 @@ config();
 const app = exp();
 //enable cors
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174" , "https://atp-24-eg-109-a26-lnv7.vercel.app"],
+  origin: ["http://localhost:5173", "http://localhost:5174" , "https://atp-24-eg-109-a26-lnv7.vercel.app","https://26-blogapp-git-main-kapish-0xs-projects.vercel.app"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   credentials: true
 }));
