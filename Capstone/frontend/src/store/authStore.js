@@ -16,7 +16,8 @@ export const useAuth = create((set) => ({
         error: null,
       });
       //make api call
-      let res = await axios.post("http://localhost:4000/auth/login", userCred, {
+      const API = import.meta.env.VITE_API_URL;
+      let res = await axios.post(`${API}/auth/login`, userCred, {
         withCredentials: true,
       });
       //update state
@@ -43,7 +44,8 @@ export const useAuth = create((set) => ({
     try {
       //set loading state
       //make logout api req
-      let res = await axios.get("http://localhost:4000/auth/logout", {
+      const API = import.meta.env.VITE_API_URL;
+      let res = await axios.get(`${API}/auth/logout`, {
         withCredentials: true,
       });
       //update state
