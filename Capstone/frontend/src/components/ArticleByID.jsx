@@ -48,9 +48,9 @@ function ArticleByID() {
     //otherwise, make api req to read that article by id
     const getArticle = async () => {
       setLoading(true);
-
+      const API = import.meta.env.VITE_API_URL;
       try {
-        const res = await axios.get(`http://localhost:4000/user-api/article/${id}`, { withCredentials: true });
+        const res = await axios.get(`${API}/user-api/article/${id}`, { withCredentials: true });
 
         setArticle(res.data.payload);
       } catch (err) {
@@ -77,10 +77,10 @@ function ArticleByID() {
 
     const confirmMsg = newStatus ? "Restore this article?" : "Delete this article?";
     if (!window.confirm(confirmMsg)) return;
-
+    const API = import.meta.env.VITE_API_URL;
     try {
       const res = await axios.patch(
-        "http://localhost:4000/author-api/articles",
+        `${API}/author-api/articles`,
         { articleId: article._id, isArticleActive: newStatus },
         { withCredentials: true },
       );
@@ -113,7 +113,8 @@ function ArticleByID() {
     //add artcileId
     commentObj.articleId = article._id;
     console.log(commentObj);
-    let res = await axios.put("http://localhost:4000/user-api/articles", commentObj, { withCredentials: true });
+    const API = import.meta.env.VITE_API_URL;
+    let res = await axios.put(`${API}/user-api/articles`, commentObj, { withCredentials: true });
     if (res.status === 200) {
       
       setArticle(res.data.payload);

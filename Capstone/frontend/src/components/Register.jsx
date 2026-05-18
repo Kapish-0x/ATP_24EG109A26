@@ -47,8 +47,9 @@ function Register() {
     try {
       //start loading
       setLoading(true);
+      const API = import.meta.env.VITE_API_URL
       //make HTTP POST req to create User in backend
-      let res = await axios.post("http://localhost:4000/auth/users", formData,{withCredentials:true});
+      let res = await axios.post(`${API}/auth/users`, formData,{withCredentials:true});
 
       if (res.status === 201) {
         //navigate to Login

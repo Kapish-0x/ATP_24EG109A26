@@ -16,7 +16,8 @@ export default function AdminProfile() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:4000/admin-api/details", {
+      const API = import.meta.env.VITE_API_URL;
+      const res = await axios.get(`${API}/admin-api/details`, {
         withCredentials: true,
       });
       setUsers(res.data.payload);
@@ -33,10 +34,11 @@ export default function AdminProfile() {
   }, []);
 
   // Block/activate user
+  const API = import.meta.env.VITE_API_URL;
   const toggleUserStatus = async (id, currentStatus) => {
     try {
       await axios.patch(
-        `http://localhost:4000/admin-api/block/${id}`,
+        `${API}/admin-api/block/${id}`,
         { isUserActive: !currentStatus },
         { withCredentials: true }
       );

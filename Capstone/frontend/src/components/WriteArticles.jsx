@@ -37,13 +37,13 @@ function WriteArticles() {
     try {
       //set loading true
       setLoading(true);
+      const API = import.meta.env.VITE_API_URL;
       //make POST req to save new article
-      let res = await axios.post("http://localhost:4000/author-api/article", articleObj, { withCredentials: true });
+      let res = await axios.post(`${API}/author-api/article`, articleObj, { withCredentials: true });
       //navigate to AuthorArticles
       if (res.status === 201) {
         toast.success("Article published successfully")
         navigate("../articles");
-        // navigate("./author-profile/articles");
       }
     } catch (err) {
        toast.error(err.response?.data?.error || "Failed to publish article");
