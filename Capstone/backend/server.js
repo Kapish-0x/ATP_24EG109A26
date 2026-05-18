@@ -13,7 +13,7 @@ config();
 const app = exp();
 //enable cors
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"], // allow both ports
+  origin: ["http://localhost:5173", "http://localhost:5174" , "https://atp-24-eg-109-a26-lnv7.vercel.app"], // allow both ports
   credentials: true
 }));
 //add cookie parser middeleware
@@ -29,7 +29,7 @@ app.use("/auth", commonApp);
 //connect to db
 const connectDB = async () => {
   try {
-    await connect(process.env.DB_URL);
+    await connect(process.env.MONGODB_URI);
     console.log("DB server connected");
     //assign port
     const port = process.env.PORT || 5000;
